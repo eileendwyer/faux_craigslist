@@ -10,15 +10,11 @@
   <body>
     <br>
     <div class="container">
-      <a href="{%url 'index'%}">Door County Villages</a>
-      <a href="{%url 'login'%}">Login</a>
-      <a href="{%url 'logout'%}?next=/">Logout</a>
-
-      {{ request.user }}
-      {% block content %}
-          No content provided
-      {% endblock %}
+      <h1><a href="{% url 'index'%}">Door County Villages</a></h1>
     </div>
 
-  </body>
-</html>
+    {% block content %}
+
+    No content provided
+
+    {% endblock %}

@@ -16,11 +16,15 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf.urls import static
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.views import logout
 
-from tootieapp.views import IndexView
+from tootieapp.views import IndexView, ProfileView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', IndexView.as_view(), name="index"),
+    #url(r'^logout/$', logout, name="logout"),
+    #url(r'^accounts/profile/$', login_required(ProfileView.as_view()), name="profile_view"),
     #url('^', include('django.contrib.auth.urls')),
 ]

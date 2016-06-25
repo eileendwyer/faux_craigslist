@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="conatainer">
+</div>
+
+<ul>
+  {% for village in object_list %}
+    <h3><li class="village">{{ village }}</li></h3>
+  {% endfor %}
+
+</ul>
+
+{% endblock %}
